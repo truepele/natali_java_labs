@@ -3,7 +3,7 @@
   * This class models a Person
   *
   * @author Nataliia Pinchuk
-  * @version 10/16/2018
+  * @version 11/01/2018
   */
  public class Person
  { 
@@ -79,6 +79,7 @@
                 return "too many times!";            
         }        
     }
+	
     
     /**
      * Mutate the firstName instance variable.
@@ -158,8 +159,7 @@
     public int getAge()
     {
         return age;
-    }
-    
+    }    
     
     
     /**
@@ -194,21 +194,7 @@
     {
         return "Hello my name is " +  firstName + " " + lastName + " and my age is " + age;
     }
-    
-    
 }
-    
-
-
-        
-
-
-
-
-        
-        
-    
-
    
     
 
