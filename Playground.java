@@ -10,6 +10,27 @@ public class Playground
      */
     public void run()
     {
+        // Create two instances of the Person class
+        Person person1 = new Person("Sean", "");
+        Person person2 = new Person("Michael", "");
+        
+        // using the references to each instance compare names
+        if(person1.getFirstName() == person2.getFirstName())
+        {
+            System.out.println("Same name!");
+        }
+        else
+        {
+            System.out.println("Different name!");
+        }
+    }
+    
+    
+    /**
+     * From lab4: Add people to the playground and perform some actions
+     */
+    public void runLab4()
+    {
         // Create an instance of the Person class
         Person person = new Person();
         
@@ -41,6 +62,5 @@ public class Playground
         {
             System.out.println("Person is young!");
         }
-      
     }
 }

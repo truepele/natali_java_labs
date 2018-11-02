@@ -40,8 +40,8 @@
     {
         counter++;
 
-        firstName = _firstName;
-        lastName = _lastName;
+        setFirstName(_firstName);
+        setLastName(_lastName);
     }
     
 
@@ -58,26 +58,10 @@
     {   
         counter++;
         
-        if(_age >= 1 && _age <= 100)
-        {
-            age = _age;
-        }
-        else
-        {
-            age = 1;
-        }
-        
-        if(_height >= 1 && _height <= 200)
-        {
-            height = _height;        
-        }
-        else
-        {
-            height = 150;
-        }
-          
-        firstName = _firstName;
-        lastName = _lastName;
+        setAge(_age);
+        setHeight(_height);
+        setFirstName(_firstName);
+        setLastName(_lastName);
     } 
        
     
@@ -103,6 +87,12 @@
      */
     public void setFirstName(String _firstName)
     {
+        if(_firstName == null || _firstName.isEmpty())
+        {            
+            _firstName = "John";
+            System.out.println("_firstName parameter supplied is invalid. firstName instance variable set to default value \"" + _firstName + "\"");
+        }
+        
         firstName = _firstName;
     }
     
@@ -125,6 +115,12 @@
      */
     public void setLastName(String _lastName)
     {
+        if(_lastName == null || _lastName.isEmpty())
+        {
+            _lastName = "Doe";
+            System.out.println("_lastName parameter supplied is invalid. lastName instance variable set to default value \"" + _lastName + "\"");
+        }
+        
         lastName = _lastName;
     }
     
