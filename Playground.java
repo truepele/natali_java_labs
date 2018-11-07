@@ -4,32 +4,13 @@
  */
 public class Playground
 { 
-
-    /**
-     * Add people to the playground and perform some actions
-     */
-    public void run()
-    {
-        // Create two instances of the Person class
-        Person person1 = new Person("Sean", "");
-        Person person2 = new Person("Michael", "");
-        
-        // using the references to each instance compare names
-        if(person1.getFirstName() == person2.getFirstName())
-        {
-            System.out.println("Same name!");
-        }
-        else
-        {
-            System.out.println("Different name!");
-        }
-    }
+    public static final int OLD_AGE = 65;
     
     
     /**
      * From lab4: Add people to the playground and perform some actions
      */
-    public void runLab4()
+    public void run()
     {
         // Create an instance of the Person class
         Person person = new Person();
@@ -54,13 +35,29 @@ public class Playground
         
         // using the accessor methods, grab the age property of the Person
         double age = person.getAge();
-        if(age > 65)
+        if(age > OLD_AGE)
         {
             System.out.println("Person is old!");
         }
         else
         {
             System.out.println("Person is young!");
+        }
+        
+        
+        // Lab 5:
+        
+        // Create two instances of the Person class
+        Person person2 = new Person("Sean", "Doe");
+        
+        // using the references to each instance compare names
+        if(person.getFirstName().equals(person2.getFirstName()))
+        {
+            System.out.println("Same name!");
+        }
+        else
+        {
+            System.out.println("Different name!");
         }
     }
 }
