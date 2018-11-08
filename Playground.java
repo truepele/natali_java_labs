@@ -1,10 +1,51 @@
 
 /**
  * A class representing a playground containing people.
+ * 
+ * Lab 6
+ *
+ * @author Nataliia Pinchuk
+ * @version 11/7/2018
  */
 public class Playground
 { 
-    public static final int OLD_AGE = 65;
+    public static final int OLD_AGE = 65;    
+    private Person[] personArray = new Person[5];
+    
+    /**
+     * Simple method to exercise knowledge around arrays and while loops
+     */
+    public void addPeople()
+    {
+        personArray[0] = new Person();
+        personArray[0].setAge(10);
+        
+        personArray[1] = new Person();
+        personArray[1].setAge(15);
+        
+        personArray[2] = new Person();
+        personArray[2].setAge(23);
+        
+        personArray[3] = new Person();
+        personArray[3].setAge(38);
+        
+        personArray[4] = new Person();
+        personArray[4].setAge(28);
+                
+        int total = 0;
+        int count = 0;        
+        
+        while(count < personArray.length)
+        {
+            total += personArray[count].getAge();
+            count++;
+        }
+        
+        double average = total / count;
+        
+        System.out.println("Average age is: " + average);    
+    }
+    
     
     /**
      * Simple method demonstrating external method calls through object references.
