@@ -6,9 +6,8 @@ public class Playground
 { 
     public static final int OLD_AGE = 65;
     
-    
     /**
-     * From lab4: Add people to the playground and perform some actions
+     * Simple method demonstrating external method calls through object references.
      */
     public void run()
     {
